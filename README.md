@@ -1,16 +1,16 @@
 
-# How to install Radix Themes in the Next.js App Router?
-Understand the installation process of Radix Themes in the nextjs app router, [then check out my article](https://medium.com/frontendweb/how-to-install-radix-themes-in-the-next-js-app-router-97b41425ac9b).
+# How to deploy the Next.js App router application on GitHub Pages using PNPM?
+deploy the nextjs app router demo application using pnpm, [read full article](https://medium.com/frontendweb/how-to-deploy-the-next-js-app-router-application-on-github-pages-using-pnpm-54ac72424d80).
 
 ## installation
 
 ### Clone the project
 ```bash
-git clone https://github.com/officialrajdeepsingh/radix-theme.git
+git clone https://github.com/officialrajdeepsingh/deploy-nextjs-app-router-github-pages.git
 ```
 ### Change the folder 
 ```bash
-cd radix-theme
+cd deploy-nextjs-app-router-github-pages
 ```
 
 ### Install the node package
@@ -37,24 +37,23 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can edit the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 ## Note
-Remove the following code when you start your local development server. The following code only works when you deploy your site on the GitHub page.
+Remove the following code when you start your local development server. Then remove the `output` and `images.unoptimized` config in `next.config.js`file, when you deploy your site on the GitHub page.
 
 ```javascript
 // next.config.js
 
 /** @type {import('next').NextConfig} */
-let envImageUnoptimize = process.env.NODE_ENV !== "production" ? false : true
 const nextConfig = {
-  output:  process.env.NODE_ENV !== "production" ? undefined: "export",
+  output:  process.env.NODE_ENV !== "production" ? undefined: "export", 
   images: {
-    unoptimized: envImageUnoptimize,
+    unoptimized: false,
     remotePatterns: [
       {
         hostname: "images.unsplash.com",
       },
     ],
   },
-};
+}
 
 module.exports = nextConfig;
 
