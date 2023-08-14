@@ -14,8 +14,8 @@ import { Header } from "@/components/Header/Header";
 import { NextThemeProvider } from '@/components/ThemeProvider';
 const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
-  title: "Install Radix Theme",
-  description: "Built new demo project with Radix Theme",
+  title: "Deploy nextjs app router application on github page with PNPM",
+  description: "Deploy nextjs app router application on github page with PNPM",
 };
 
 export default function RootLayout({
