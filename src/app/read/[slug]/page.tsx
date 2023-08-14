@@ -52,7 +52,7 @@ export default async function Read({ params }: { params: { slug: string } }) {
         }}
       >
         <Container py={"6"}>
-          <Link href="/blogs">
+          <Link href="/">
             <IconButton size={"2"} variant="soft">
               <ArrowLeftIcon width="24" height="24" />
             </IconButton>
