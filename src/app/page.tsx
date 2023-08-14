@@ -1,35 +1,35 @@
-import { ImageCard } from "@/components/Card/ImageCard";
-import { Box, Button, Card, Container, Flex, Heading, Text } from "@radix-ui/themes";
+import { BlogCard } from "@/components/Card/Card";
+import { PinCard } from "@/components/Card/PinCard";
+import { Box, Button, Card, Container, Flex, Heading, Text } from "@radix-ui/themes"
 
-export default function Home() {
+interface Post {
+  id: number;
+  title: string;
+  reactions: number;
+  userId: number;
+  body: string;
+  tags: string[];
+}
+async function getDummyPosts() {
+  const res = await fetch("https://dummyjson.com/posts?limit=10");
+
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error("Failed to fetch data");
+  }
+
+  return res.json();
+}
+
+export default async function Home() {
+  const { posts } = await getDummyPosts();
+
   return (
     <>
-      <Card
-        my={"7"}
-        variant="classic"
-        size={"4"}
-        style={{ borderRadius: "0" }}
-      >
-        <Container py={"6"}>
-          <Flex direction={"column"}>
-            <Heading as="h1" mb={"4"} size={"7"}>
-              Lorem ipsum dolor sit amet, qui minim labore adipisicing minim
-              sint cillum sint consectetur cupidatat.
-            </Heading>
-            <Text as="p" size={"4"}>
-              Qui minim labore adipisicing minim sint
-            </Text>
-            <Box mt={"6"}>
-              <Button size={"3"}>Learn More</Button>
-            </Box>
-          </Flex>
-        </Container>
-      </Card>
-      <Container>
-        <ImageCard variant="surface" />
-        <ImageCard variant="ghost" />
-        <ImageCard variant="classic" />
-      </Container>
+
+      {posts.map((post: Post) => post.id== 1? <PinCard key={post.id} post={post} /> : <BlogCard key={post.id} post={post} />)}
+
     </>
   );
 }
+
