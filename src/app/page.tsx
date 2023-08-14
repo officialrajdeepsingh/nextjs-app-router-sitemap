@@ -1,7 +1,5 @@
 import { BlogCard } from "@/components/Card/Card";
 import { PinCard } from "@/components/Card/PinCard";
-import { Box, Button, Card, Container, Flex, Heading, Text } from "@radix-ui/themes"
-
 interface Post {
   id: number;
   title: string;
