@@ -14,7 +14,6 @@ export function Header() {
           
           {/* Link component come from radix ui */}
           <Link href="/deploy-nextjs-app-router-github-pages/" weight="medium">Home</Link>
-          <Link href="/deploy-nextjs-app-router-github-pages/blogs" weight="medium">Blog</Link>
           <Link href="/deploy-nextjs-app-router-github-pages/about" weight="medium">About us</Link>
           <Link href="/deploy-nextjs-app-router-github-pages/contact" weight="medium">Contact us</Link>
 
