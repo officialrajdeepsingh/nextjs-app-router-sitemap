@@ -10,6 +10,7 @@ import {
 } from "@radix-ui/themes";
 import Link from "next/link";
 
+// typescript 
 interface Post {
   id: number;
   title: string;
@@ -19,7 +20,9 @@ interface Post {
   tags: string[];
 }
 
+// fetch the all slug during next build
 export async function generateStaticParams() {
+  
   const { posts } = await fetch("https://dummyjson.com/posts?limit=10").then((
     res,
   ) => res.json());
@@ -29,6 +32,7 @@ export async function generateStaticParams() {
   }));
 }
 
+// fetch the single post data based on id (slug) 
 async function getDummySinglePost(id: string) {
   const res = await fetch(`https://dummyjson.com/posts/${id}`);
 
@@ -39,7 +43,10 @@ async function getDummySinglePost(id: string) {
 
   return res.json();
 }
+// return jsx or component
 export default async function Read({ params }: { params: { slug: string } }) {
+  
+// get single data 
   const post: Post = await getDummySinglePost(params.slug);
 
   return (
