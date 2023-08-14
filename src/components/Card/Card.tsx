@@ -1,4 +1,4 @@
-import { Badge, Card, Flex, Heading } from "@radix-ui/themes";
+import { Badge, Card, Flex, Heading,Container,Button } from "@radix-ui/themes";
 import Link from "next/link";
 interface Post {
   id: number;
@@ -10,26 +10,30 @@ interface Post {
 }
 export function BlogCard({ post }: { post: Post }) {
   return (
-    <Card my={"9"} size="3">
-      <Flex
-        gap={"5"}
-        align={"start"}
-        shrink={"1"}
-        justify={"center"}
-        direction={"column"}
-      >
-        <Heading as="h2" color="gray" mb="1" size="5">
-          {post.title}
-        </Heading>
-        <Flex gap="2">
-          {post.tags.map(
-            (tag) => <Badge size={"2"} key={tag}>{tag}</Badge>,
-          )}
+    <Container p={"5"} my={"9"}>
+      <Card my={"9"} size="3">
+        <Flex
+          gap={"5"}
+          align={"start"}
+          shrink={"1"}
+          justify={"center"}
+          direction={"column"}
+        >
+          <Heading as="h2" color="gray" mb="1" size="5">
+            {post.title}
+          </Heading>
+          <Flex gap="2">
+            {post.tags.map(
+              (tag) => <Badge size={"2"} key={tag}>{tag}</Badge>,
+            )}
+          </Flex>
+          <Link href={`/read/${post.id}`}>
+            <Button size={"3"}>
+                Read More
+            </Button>
+          </Link>
         </Flex>
-        <Link href={`/read/${post.id}`}>
-          Read More
-        </Link>
-      </Flex>
-    </Card>
+      </Card>
+    </Container>
   );
 }
