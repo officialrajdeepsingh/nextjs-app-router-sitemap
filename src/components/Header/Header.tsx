@@ -2,19 +2,22 @@
 
 import { Container, Flex, IconButton } from "@radix-ui/themes";
 import { useTheme } from "next-themes";
-import { EnvelopeOpenIcon, HomeIcon, MoonIcon, PersonIcon, SunIcon } from "@radix-ui/react-icons";
+import {
+  EnvelopeOpenIcon,
+  HomeIcon,
+  MoonIcon,
+  PersonIcon,
+  SunIcon,
+} from "@radix-ui/react-icons";
 import Link from "next/link";
 import { Button } from "@radix-ui/themes";
 
 export function Header() {
-  
   const { theme, setTheme } = useTheme();
-
   return (
     <>
       <Container py={"5"} size="2">
         <Flex gap="5" align={"center"} justify={"center"} direction="row">
-          
           {/* Link component come from radix ui */}
           <Link href="/deploy-nextjs-app-router-github-pages/">
             <Button size={"3"} variant="soft">
