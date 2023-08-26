@@ -6,11 +6,11 @@ deploy the nextjs app router demo application using pnpm, [read full article](ht
 
 ### Clone the project
 ```bash
-git clone https://github.com/officialrajdeepsingh/deploy-nextjs-app-router-github-pages.git
+git clone https://github.com/officialrajdeepsingh/nextjs-app-router-sitemap.git
 ```
 ### Change the folder 
 ```bash
-cd deploy-nextjs-app-router-github-pages
+cd nextjs-app-router-sitemap
 ```
 
 ### Install the node package
@@ -45,14 +45,6 @@ Remove the following code when you start your local development server. Then rem
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output:  process.env.NODE_ENV !== "production" ? undefined: "export", 
-  images: {
-    unoptimized: false,
-    remotePatterns: [
-      {
-        hostname: "images.unsplash.com",
-      },
-    ],
-  },
 }
 
 module.exports = nextConfig;
