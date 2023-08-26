@@ -18,7 +18,9 @@ export function Header() {
     <>
       <Container py={"5"} size="2">
         <Flex gap="5" align={"center"} justify={"center"} direction="row">
+          
           {/* Link component come from radix ui */}
+          
           <Link href="/deploy-nextjs-app-router-github-pages/">
             <Button size={"3"} variant="soft">
               <HomeIcon width="16" height="16" /> Home
