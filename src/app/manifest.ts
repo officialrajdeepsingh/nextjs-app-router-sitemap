@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next'
- import {SITE_URL} from "@/url"
+ import { SITE_URL } from "@/url"
 export default function manifest(): MetadataRoute.Manifest {
   
   return {
