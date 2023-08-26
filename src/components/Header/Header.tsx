@@ -21,19 +21,18 @@ export function Header() {
           
           {/* Link component come from radix ui */}
           
-          <Link href="/nextjs-app-router-sitemap/">
+          <Link href="/">
             <Button size={"3"} variant="soft">
               <HomeIcon width="16" height="16" /> Home
             </Button>
           </Link>
 
-          <Link href="/nextjs-app-router-sitemap/about">
+          <Link href="/about">
             <Button size={"3"} variant="soft">
               <PersonIcon width="16" height="16" /> About us
             </Button>
           </Link>
-
-          <Link href="/nextjs-app-router-sitemap/contact">
+          <Link href="/contact">
             <Button size={"3"} variant="soft">
               <EnvelopeOpenIcon width="16" height="16" /> Contact us
             </Button>
