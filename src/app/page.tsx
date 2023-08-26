@@ -9,6 +9,7 @@ interface Post {
   tags: string[];
 }
 async function getDummyPosts() {
+
   const res = await fetch("https://dummyjson.com/posts?limit=10");
 
   if (!res.ok) {
