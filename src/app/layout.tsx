@@ -14,8 +14,8 @@ import { Header } from "@/components/Header/Header";
 import { NextThemeProvider } from '@/components/ThemeProvider';
 const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
-  title: "Deploy nextjs app router application on github page with PNPM",
-  description: "Deploy nextjs app router application on github page with PNPM",
+  title: "Generate a SiteMap",
+  description: "Generate a SiteMap with nextjs app router",
 };
 
 export default function RootLayout({
