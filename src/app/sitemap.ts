@@ -1,22 +1,22 @@
 import { MetadataRoute } from "next";
-
+import {SITE_URL} from "@/url"
 export default function sitemap(): MetadataRoute.Sitemap {
   
-  let URL = process.env.NEXT_URL;
+  let URL = "https://officialrajdeepsingh.github.io/nextjs-app-router-sitemap"
 
   let Items = Array.from({ length: 10 }, (_v,i) => ({   url: `${URL}/read/${i+1}`, lastModified: new Date() }));
   
   return [
     {
-      url: `${URL}`,
+      url: SITE_URL,
       lastModified: new Date(),
     },
     {
-      url: `${URL}/about`,
+      url: `${SITE_URL}/about`,
       lastModified: new Date(),
     },
     {
-      url: `${URL}/contact`,
+      url: `${SITE_URL}/contact`,
       lastModified: new Date(),
     },
     ...Items
