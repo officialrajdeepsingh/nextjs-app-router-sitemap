@@ -21,10 +21,10 @@ export function PinCard({post}:{post:Post}) {
       <Card
         my={"7"}
         variant="classic"
-        size={"4"}
+        size={"5"}
         style={{ borderRadius: "0" }}
       >
-        <Container py={"6"}>
+        <Container py={"7"}>
           <Flex direction={"column"}>
             <Heading as="h1" mb={"4"} size={"7"}>
               {post.title}
