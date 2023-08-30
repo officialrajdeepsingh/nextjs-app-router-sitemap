@@ -1,6 +1,5 @@
-
-# How to deploy the Next.js App router application on GitHub Pages using PNPM?
-deploy the nextjs app router demo application using pnpm, [read full article](https://medium.com/frontendweb/how-to-deploy-the-next-js-app-router-application-on-github-pages-using-pnpm-54ac72424d80).
+# How can the Sitemap, Robot, and manifest.json be generated in the Next.js app router?
+Generate sitemap, robots, and manifest.json files in the Next.js app router without installing a third additional NPM package, [read full article](https://medium.com/frontendweb/how-to-deploy-the-next-js-app-router-application-on-github-pages-using-pnpm-54ac72424d80).
 
 ## installation
 
@@ -39,14 +38,26 @@ You can edit the page by modifying `app/page.tsx`. The page auto-updates as you 
 ## Note
 Remove the following code when you start your local development server. Then remove the `output` and `images.unoptimized` config in `next.config.js`file, when you deploy your site on the GitHub page.
 
+
 ```javascript
 // next.config.js
 
 /** @type {import('next').NextConfig} */
+let envImageUnoptimize = process.env.NODE_ENV !== "production" ? false : true
+
 const nextConfig = {
   output:  process.env.NODE_ENV !== "production" ? undefined: "export", 
-}
+  images: {
+    unoptimized: envImageUnoptimize,
+    remotePatterns: [
+      {
+        hostname: "images.unsplash.com",
+      },
+    ],
+  },
+};
 
 module.exports = nextConfig;
+
 
 ```
