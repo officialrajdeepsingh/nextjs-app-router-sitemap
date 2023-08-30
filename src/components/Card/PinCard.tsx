@@ -20,10 +20,9 @@ export function PinCard({post}:{post:Post}) {
   return (
       <Card
         my={"7"}
-        variant="classic"
+        variant="ghost"
         size={"5"}
-        style={{ borderRadius: "0" }}
-      >
+        style={{ background: "var(--gray-a2)" }}>
         <Container py={"7"}>
           <Flex direction={"column"}>
             <Heading as="h1" mb={"4"} size={"7"}>
