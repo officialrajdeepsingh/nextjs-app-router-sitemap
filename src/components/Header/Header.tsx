@@ -17,7 +17,7 @@ export function Header() {
   return (
     <>
       <Container py={"5"} size="2">
-        <Flex gap="5" align={"center"} justify={"center"} direction="row">
+        <Flex gap="5" align={"center"} wrap={"wrap"} justify={"center"} direction="row">
           
           {/* Link component come from radix ui */}
           
