@@ -1,12 +1,10 @@
 import { MetadataRoute } from "next";
-import {SITE_URL} from "@/url"
+import { SITE_URL } from "@/url"
 
-
+let Items = Array.from({ length: 10 }, (_v,i) => ({   url: `${SITE_URL}/read/${i+1}`, lastModified: new Date() }));
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  
-  let Items = Array.from({ length: 10 }, (_v,i) => ({   url: `${SITE_URL}/read/${i+1}`, lastModified: new Date() }));
-  
+ 
   return [
     {
       url: SITE_URL,
@@ -20,7 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${SITE_URL}/contact`,
       lastModified: new Date(),
     },
-    ...Items
-  ];
+    ...Items,
+   ];
 
 }
