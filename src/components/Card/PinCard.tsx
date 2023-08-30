@@ -22,7 +22,8 @@ export function PinCard({post}:{post:Post}) {
         my={"7"}
         variant="ghost"
         size={"5"}
-        style={{ background: "var(--gray-a2)" }}>
+        mx={"0"}
+        style={{ background: "var(--gray-a2)", marginLeft:0, marginRight:0}}>
         <Container py={"7"}>
           <Flex direction={"column"}>
             <Heading as="h1" mb={"4"} size={"7"}>
