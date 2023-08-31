@@ -1,5 +1,5 @@
 # How can the Sitemap, Robot, and manifest.json be generated in the Next.js app router?
-Generate sitemap, robots, and manifest.json files in the Next.js app router without installing a third additional NPM package, [read full article](https://medium.com/frontendweb/how-to-deploy-the-next-js-app-router-application-on-github-pages-using-pnpm-54ac72424d80).
+Generate sitemap, robots, and manifest.json files in the Next.js app router without installing a third additional NPM package, [read full article](https://medium.com/frontendweb/how-can-the-sitemap-robots-and-manifest-json-be-generated-in-the-next-js-app-router-ab5df95d1c58).
 
 ## installation
 
